@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <title>Data Entry App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+<body>
+
+<div class="container">
+<form action="{{url_for('view')}}" method="POST">
+<button type="submit"> Go to view page </button>
+</form>
+  <h1>Collecting HEAT usage Data</h1>
+
+  <h3> Please enter the information below </h3>
+
+  <form action="/add" method="POST">
+    <input title="Log date" placeholder="yyyy-mm-dd" type="text" name="Log_date" required> <br>
+    <input title="heat" placeholder="warmte in GJ (xxx.yy)" type="number" step="0.01" name="Heat" required> <br>
+    <input title="flow" placeholder="flow in m3 (xxx.yy)" type="number" step="0.01" name="Flow" required> <br>
+    <input title="Toelichting" placeholder="Toelichting" type="text" name="Toelichting"> <br>
+    <button type="submit"> Submit </button>
+
+  </form>
+
+ </div>
+</body>
+</html>

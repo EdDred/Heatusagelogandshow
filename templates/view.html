@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <title>View Page</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+<body>
+
+
+<div class="container_table">
+<form action="{{url_for('entry')}}" method="POST">
+<button type="submit"> Go to Entry page </button>
+</form>
+    <h1>View Page</h1>
+    <img src="static/images/plot.png">
+    <table>
+      <tr id="headertab">
+        <td>Id</td>
+        <td>Log date</td>
+        <td>Heat</td>
+        <td>Flow</td>
+        <td>Remark</td>
+        <td>Avg heart</td>
+        <td>Avg Flow</td>
+     </tr>
+
+     {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]|round(3, 'floor') }}</td>
+        <td>{{item[6]|round(3, 'floor')}}</td>
+
+      </tr>
+    {% endfor %}
+    </table>
+    </div>
+  </body>
+</html>
