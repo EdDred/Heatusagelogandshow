@@ -1,5 +1,5 @@
 # Heatusagelogandshow
-Python Program to manually log data from City Heat usage, 
+Python3 Program with flask and tkinter frontend to manually log data from City Heat usage, 
 calculate average use per day between logdates 
 and show in graph 
 Log_data = Date 
